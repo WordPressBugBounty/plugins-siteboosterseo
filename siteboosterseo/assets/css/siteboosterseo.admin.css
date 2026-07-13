@@ -1,0 +1,203 @@
+/* Style for plugin admin page */
+#adminmenu .menu-icon-dcjmyplug div.wp-menu-image:before {
+    color: #c589d5; /* Color base del ícono */
+    transition: color 0.3s ease;
+}
+
+/* Al pasar el mouse */
+#adminmenu .menu-icon-dcjmyplug:hover div.wp-menu-image:before {
+    color: #9c5e28; /* Color al hacer hover */
+}
+
+.dcjmyplug-submit-container, .dcjmyplug-title {
+ text-align: center; 
+}
+.dcjmyplug-title,.icon-container {
+ position: relative;
+}
+.dcjmyplug-title {    
+ color: #2271b1;
+    margin: 20px auto 30px auto;
+ width: 87%;
+}
+
+.icon-container {  
+       
+        text-align: left;        
+        width: 96%;
+        margin: -40px auto 0 auto;
+} 
+.icon-container svg {    
+    width: 100px;
+    height: 100px;
+}
+#dcjmyplug-submit-btn {
+    width: 150px;
+    font-weight: 700;
+}
+.icon-container{
+    min-width: 500px;
+}
+ .dcjmyplug-title, .dcjmyplug-container {
+     min-width: 700px;    
+}
+.dcjmyplug-container {
+    margin: 15px 5px 5px 5px;
+    width:92%;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #5e545426;
+    padding: 10px;
+    min-height: 300px;
+}
+#setting-error-dcjmyplug_message {
+    width: 88%;
+}
+.updated.notice {
+    border-left: 4px solid #2271b1;
+}
+#dcjmyplug-home-description, .regular-text {
+    width:100%;
+}
+#dcjmyplug-home-description {
+    resize: none;
+}
+#dcjmyplug-form, .dcjmyplug-view {
+    width: 49%;
+     margin: 8px auto;
+}
+.dcjmyplug-notify {
+    color: #d38025; 
+}
+
+.dcjmyplug-view {   
+    border: 1px solid #b5b8b8;
+    border-radius: 6px;
+}
+ .dcjmyplug-view-inner{   
+    margin:8px;
+} 
+.dcjmyplug-view input {
+    border: none;
+    display: block;
+    width: 96%;    
+    color: #333;
+}
+/* Título en azul */
+.dcjmyplug-view input:nth-child(2) {
+    color: #5447e5;
+    font-weight: 500;
+    font-size: 20px;
+}
+.dcjmyplug-description-preview {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    font-size: 16px;
+   border: none;  
+   border-radius: 3px;
+    color: #333;
+    resize: none;
+    max-height: 160px;
+}
+.dcjmyplug-translate,.dcjmyplug-url .dcjmyplug-view input  {
+    font-family: Arial, sans-serif;
+    
+}
+.dcjmyplug-url,.dcjmyplug-translate {
+   transform: translateY(-16px);
+}
+.dcjmyplug-url {    
+    color: #202124; /* tono más oscuro */
+       margin-left: 10px;
+}
+.dcjmyplug-translate {
+    color: #1a0dab; /* azul similar al link de Google */
+    cursor: pointer;
+}
+.dcjmyplug-translate:hover {
+    text-decoration: underline;
+}
+.dcjmyplug-url-line{
+    margin-top: 10px;   
+}
+#dcjmyplug-preview-title, .dcjmyplug-preview-description, .dcjmyplug-url-line{
+    width: 100%;     
+}
+#dcjmyplug-preview-title{
+    color: #2727eb;
+    margin-top:-12px;
+    font-size: 25px;
+    padding:0
+}
+.dcjmyplug-url {
+    color: #131212;
+    font-size: 14px;
+}
+.dcjmyplug-preview-description {
+    margin-top: -8px;
+}
+.dcjmyplug-url-line, .dcjmyplug-preview-description {
+    font-size: 14px;
+    color: #4a4a4a;
+    text-align: left;    
+}
+.dcjmyplug-preview-description{
+ border:none;    
+resize: none;
+}
+.dcjmyplug-url-line .dcjmyplug-url {
+    display: inline-block;
+    margin-right: 10px;
+    color: #202124;
+    /*vertical-align: middle;*/
+}
+.dcjmyplug-url-line .dcjmyplug-translate {
+    display: inline-block;
+    color: #1a0dab;
+    cursor: pointer;
+    /*vertical-align: middle;*/
+}
+.dcjmyplug-url-line .dcjmyplug-translate:hover {
+    text-decoration: underline;
+}
+/*ico and site url*/
+.form-table th {
+    display: block;
+    width: 96%;
+    padding: 4px;
+}
+.form-table th label {
+    display: block;
+    width: 100%;   
+    margin-bottom: 4px;
+    color: #6e7878;
+}
+.form-table td {
+    display: block;
+    width: 96%;
+    padding: 0;
+}
+.form-table input[type="text"],
+.form-table textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid #e5e8e8;
+    border-radius: 4px;
+    background-color:#f8f9f9;
+}
+.form-table textarea {
+    resize: vertical;    
+}
+@media(max-width: 1150px){
+   .dcjmyplug-container {
+    flex-direction: column;
+}
+#dcjmyplug-form, .dcjmyplug-view {
+    width: 100%;
+}
+}
+
