@@ -2,9 +2,9 @@
 Contributors: javicastilowp 
 Tags: seo, metadata, booster, performance, site
 Requires at least: 6.0
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 8.2.4 
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,16 @@ Yes, the plugin is designed to be compatible with all well-coded WordPress theme
 No, the plugin is lightweight and optimized for performance. It runs only in the admin when needed and adds minimal overhead to your site.
 
 == Changelog ==
+= 1.3.0 =
+* Tested compatibility with WordPress 7.0.
+* Added live preview effects for title and description fields in the settings panel.
+* Added a non-intrusive review request notice for plugin users.
+* Added delayed feedback display after the plugin has been configured.
+* Added "Leave a review", "Maybe later", and "No, thanks" actions.
+* Improved feedback notice behavior on the plugin settings page and WordPress Dashboard.
+* Improved redirect handling after feedback actions.
+* Added a visual fallback to hide the feedback notice after returning from the WordPress.org review page.
+* Improved admin feedback notice styling and responsive layout.
 
 = 1.2.0 =
 * Replacing the filemtime by version in the enqueue_admin_styles function of the class-childmaker-ai.php file to enqueue the siteboosterseo.admin.css file for better performance.

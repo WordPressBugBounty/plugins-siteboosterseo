@@ -3,7 +3,7 @@
  * Plugin Name: Siteboosterseo
  * Plugin URI: https://dev-ia.com/siteboosterseo
  * Description: Simple SEO metadata inserter for all pages.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Author: Javier A. D. Castillo
  * Author URI: https://dev-ia.com
  * License: GPL2
@@ -15,12 +15,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 // Get main class of the plugin
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-siteboosterseo.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/admin/feedback-request.php';
 // namespace
 use nameSiteboosterseo\classSiteboosterseo;
+use nameSiteboosterseo\classSiteboosterseoFeedbackRequest;
+
 // Install the plugin
-function run_siteboosterseo() {
+function  dcj_sbseo_siteboosterseo() {
     $pluginSbseo = new classSiteboosterseo();
     $pluginSbseo->run();
+    classSiteboosterseoFeedbackRequest::run();
 }
-run_siteboosterseo();
+ dcj_sbseo_siteboosterseo();
 
