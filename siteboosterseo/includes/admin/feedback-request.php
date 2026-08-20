@@ -163,8 +163,17 @@ $redirect_to = wp_validate_redirect( $redirect_to, admin_url( 'index.php' ) );
 				'dismissed' => true,
 			)
 		);
-
-		wp_redirect( esc_url_raw( $review_url ) );
+		
+add_filter(
+	'allowed_redirect_hosts',
+	static function ( $hosts ) {
+		if ( ! in_array( 'wordpress.org', $hosts, true ) ) {
+			$hosts[] = 'wordpress.org';
+		}
+		return $hosts;
+	}
+);
+		wp_safe_redirect( $review_url );
 		exit;
 	}
 	if ( 'later' === $feedback_action ) {
@@ -322,7 +331,7 @@ public static function shouldShowFeedbackRequest() {
 private static function getCurrentAdminUrl() {
 	$scheme      = is_ssl() ? 'https://' : 'http://';
 	$host        = isset( $_SERVER['HTTP_HOST'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) : '';
-	$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$request_uri = isset( $_SERVER['REQUEST_URI'] )	? sanitize_url( wp_unslash( $_SERVER['REQUEST_URI'] ) )	: '';
 
 	if ( empty( $host ) || empty( $request_uri ) ) {
 		return admin_url( 'index.php' );

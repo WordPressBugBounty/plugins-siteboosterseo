@@ -2,9 +2,9 @@
 Contributors: javicastilowp 
 Tags: seo, metadata, booster, performance, site
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.2.4 
-Stable tag: 1.3.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,10 @@ Yes, the plugin is designed to be compatible with all well-coded WordPress theme
 No, the plugin is lightweight and optimized for performance. It runs only in the admin when needed and adds minimal overhead to your site.
 
 == Changelog ==
+= 2.0.0 =
+* Tested compatibility with WordPress 7.1
+* Improved request URI sanitization and secure redirect handling to follow WordPress security best practices.
+* Improved internal function naming to prevent potential conflicts(dcjSbseoConnectPlugin).
 = 1.3.0 =
 * Tested compatibility with WordPress 7.0.
 * Added live preview effects for title and description fields in the settings panel.
